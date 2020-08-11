@@ -93,7 +93,7 @@ class OthelloGame():
         for y in range(len(self.board)):
             for x in range(len(self.board[0])):
                 check_board = copy.deepcopy(self.board)
-                if self.board[y][x] == 0 and self.put_stone(check_board, x, y, player):
+                if self.board[y][x] == 0 and self.put_stone(check_board, y, x, player):
                     return True
         return False
    
