@@ -100,6 +100,9 @@ class OthelloGame():
 
 
     def put_stone(self, board, row, col, player):
+        if board[row][col] != 0:
+            print("ここに判定が必要") #c5 c4 c3 c4と入力したときにここで問題が起こる
+            return False
         turned = False
 
         if row + 1 < len(board) and board[row + 1][col] == self.opponent[player]:
